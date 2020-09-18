@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "memeapp"
+    }
+  },
+  "defaultProject": "memeapp",
+  "cli": {
+    "analytics": false
+  }
 }

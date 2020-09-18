@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MemeService } from './meme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'memeapp';
+  
+  public meme={};
+  constructor(private _memeservice:MemeService  ) {
+    
+  }
+  ngOnInit(): void {
+    this._memeservice.getMeme().subscribe(data=>(this.meme=data,console.log(this.meme)), error => console.log(error));
+   }
+
+  title = "ji";
+  onclick(){
+     this._memeservice.getMeme().subscribe(data=>(this.meme=data,console.log(this.meme)), error => console.log(error));
+    }
+  
 }

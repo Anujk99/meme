@@ -3,14 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import{HttpClientModule} from '@angular/common/http';
+import{MemeService} from './meme.service';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
